@@ -2,7 +2,7 @@ import React from "react";
 import book_a from "./assets/images/book-a.png";
 import styles from "./assets/book.module.css";
 
-function Book(props) {
+function BookA(props) {
   const handleClick = () => {
     window.open(props.bookUrl);
   };
@@ -11,4 +11,4 @@ function Book(props) {
   );
 }
 
-export default Book;
+export default BookA;

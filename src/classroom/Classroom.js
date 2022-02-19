@@ -1,6 +1,11 @@
 import React from "react";
 import Chalkboard from "./Chalkboard";
-import Book from "./Book";
+import BookA from "./BookA";
+import BookB from "./BookB";
+import BookC from "./BookC";
+import BookD from "./BookD";
+import BookE from "./BookE";
+import BookF from "./BookF";
 import SmallTable from "./SmallTable";
 import BigTable from "./BigTable";
 import styles from "./assets/chalkboard.module.css";
@@ -28,7 +33,7 @@ function Classroom() {
       style={{ cursor: `url(${cursorPic}),auto` }}
       className={styles.cursor}
     >
-      <div>This is where the classroom is yayyyyy</div>
+      &nbsp;
       <div className={styles.chalkboardContainer}>
         <Chalkboard></Chalkboard>
       </div>
@@ -47,38 +52,38 @@ function Classroom() {
       <div className={bookstyles.bookshelf}>
         <div className={bookstyles.tooltip}>
           <span className={bookstyles.tooltiptext}>Course Outline</span>
-          <Book bookUrl={course_outline}>
-          </Book>
+          <BookA bookUrl={course_outline}>
+          </BookA>
         </div>
 
         <div className={bookstyles.tooltip}>
           <span className={bookstyles.tooltiptext}>Homework 4</span>
-          <Book bookUrl={homework}>
-          </Book>
+          <BookB bookUrl={homework}>
+          </BookB>
         </div>
 
         <div className={bookstyles.tooltip}>
           <span className={bookstyles.tooltiptext}>Week 4 Notes</span>
-          <Book bookUrl={week4}>
-          </Book>
+          <BookC bookUrl={week4}>
+          </BookC>
         </div>
 
         <div className={bookstyles.tooltip}>
           <span className={bookstyles.tooltiptext}>Week 6a Notes</span>
-          <Book bookUrl={week6a}>
-          </Book>
+          <BookD bookUrl={week6a}>
+          </BookD>
         </div>
 
         <div className={bookstyles.tooltip}>
           <span className={bookstyles.tooltiptext}>Practice Test 1</span>
-          <Book bookUrl={practice_test}>
-          </Book>
+          <BookE bookUrl={practice_test}>
+          </BookE>
         </div>
 
         <div className={bookstyles.tooltip}>
           <span className={bookstyles.tooltiptext}>Test 1 Solution</span>
-          <Book bookUrl={test_solution}>
-          </Book>
+          <BookF bookUrl={test_solution}>
+          </BookF>
         </div>
       </div>
     </motion.div>
