@@ -7,6 +7,8 @@ import SelectAvartar from "./login/SelectAvartar";
 import Classroom from "./classroom/Classroom";
 import Register from "./login/Register";
 
+import { initializeApp } from "firebase/app";
+
 import { AnimatePresence } from "framer-motion";
 import {
   BrowserRouter as Router,

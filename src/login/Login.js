@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
 import { signIn } from "../firebase";
@@ -6,7 +6,7 @@ import { pageTransition, pageVariants } from "../Transitions";
 
 import { motion } from "framer-motion";
 
-function Login() {
+function Login({ app }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +17,6 @@ function Login() {
     if (signIn(email, password)) {
       navigate("/classroom");
     }
-
 
     // let loginSuccess = true;
 
