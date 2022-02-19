@@ -24,7 +24,7 @@ const auth = getAuth();
 
 
 export function signIn(email, password) {
-    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    return signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
         return true;
       }).catch((error) => {
@@ -46,7 +46,7 @@ export function signIn(email, password) {
 
 
 export function signUp(email, password) {
-    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    return createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
         const user = userCredential.user;
         return true;
     }).catch((error) => {
