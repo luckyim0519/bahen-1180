@@ -25,16 +25,16 @@ function Landing() {
       <div className={styles.landingParent}>
         <div className={styles.mainContainer}>
           <h1>Welcome to Bahen 1180</h1>
-          <Link className={styles.link} to="/classroom">
-            Classroom Link!!
+          <Link className={styles.link} to="/register">
+            If you're new click me to register!
           </Link>
           &nbsp;
           <Link className={styles.link} to="/login">
             Login Link!!
           </Link>
           &nbsp;
-          <Link className={styles.link} to="/selectAvartar">
-            selectAvartar Link!!
+          <Link className={styles.link} to="/privacypolicy">
+            Privacy Policy
           </Link>
           &nbsp;
         </div>

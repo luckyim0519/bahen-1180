@@ -6,6 +6,7 @@ import Landing from "./login/Landing";
 import SelectAvartar from "./login/SelectAvartar";
 import Classroom from "./classroom/Classroom";
 import Register from "./login/Register";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 import { initializeApp } from "firebase/app";
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="register" element={<Register />}></Route>
           <Route path="SelectAvartar" element={<SelectAvartar />}></Route>
           <Route path="classroom" element={<Classroom />}></Route>
+          <Route path="privacypolicy" element={<PrivacyPolicy />}></Route>
         </Routes>
       </AnimatePresence>
     </div>
