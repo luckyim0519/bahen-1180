@@ -11,8 +11,8 @@
     font-family: 'Bebas Neue';
     font-size: 2rem;
     padding: 5px;
+    background-color: white;
 }
-
 
 .notesContainer {
   grid-column: 3/4;
