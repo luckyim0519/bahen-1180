@@ -23,10 +23,30 @@
   border-style: solid;
   border-width: 10px;
   border-color: brown;
-  width: 13%;
 }
 
 .book:hover {
   transform: scale(1.1);
-  cursor: pointer;
+}
+
+.tooltip {
+  display: inline-block;
+  width: 16%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #73b11c;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
