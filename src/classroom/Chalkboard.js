@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./assets/chalkboard.module.css";
 import { useNavigate } from "react-router-dom";
+import Youtube from "./Youtube";
 
 function Chalkboard() {
   const navigate = useNavigate();
@@ -10,9 +11,7 @@ function Chalkboard() {
 
   return (
     <div onClick={handleClick} className={styles.board}>
-      <video autoPlay className={styles.video}>
-        <source src={require("./assets/paul_chow.mp4")} type="video/mp4"></source>
-      </video>
+      <Youtube embedId="dQw4w9WgXcQ"></Youtube>
     </div>
   );
 }

@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
-
+import { useNavigate } from "react-router-dom";
 import { pageTransition, pageVariants } from "../Transitions";
 
 import { motion } from "framer-motion";
 
-function Login() {
+function Register() {
   const navigate = useNavigate();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleClick = () => {
-    console.log("Logging in now!");
-    // firebase stuff, determine if pw and username correct
+    console.log("Registering new user now!!");
+    // firebase stuff
+    let registerSuccess = true;
 
-    let loginSuccess = true;
-
-    if (loginSuccess) {
+    if (registerSuccess) {
       navigate("/classroom");
     }
   };
@@ -32,9 +31,18 @@ function Login() {
       className={styles.loginParent}
     >
       <div className={styles.loginContainer}>
-        <h1>Login</h1>
+        <h1>Make an Account</h1>
         <div className={styles.inputContainer}>
-          <label>email</label>
+          <label>Name</label>
+          <input
+            className={styles.inputField}
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          ></input>
+        </div>
+        <div className={styles.inputContainer}>
+          <label>Email</label>
           <input
             className={styles.inputField}
             type="text"
@@ -52,11 +60,11 @@ function Login() {
           ></input>
         </div>
         <button className={styles.loginButton} onClick={handleClick}>
-          Let Me Innn!
+          Yayy sign me up!
         </button>
       </div>
     </motion.div>
   );
 }
 
-export default Login;
+export default Register;

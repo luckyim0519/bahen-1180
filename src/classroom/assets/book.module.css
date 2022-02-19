@@ -1,10 +1,30 @@
-/* .book {
-  padding: 50px;
-  transition: transform .2s;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-} */
+.bookshelf {
+  text-align: center;
+}
+
+.smallTable {
+  margin-left: 6%;
+  margin-right: 6%;
+  width: 16%;
+}
+
+.bigTable {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 20%;
+}
+
+.tables {
+  text-align: center;
+}
+
+.book {
+  background-color: #d2a56d;
+  border-style: solid;
+  border-width: 10px;
+  border-color: brown;
+  width: 13%;
+}
 
 .book:hover {
   transform: scale(1.1);
