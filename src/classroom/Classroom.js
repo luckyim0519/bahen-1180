@@ -6,8 +6,9 @@ import styles from "./assets/chalkboard.module.css";
 import bookstyles from "./assets/book.module.css";
 
 function Classroom() {
+  const cursorPic = require("./assets/images/cat_cursor.png");
   return (
-    <div>
+    <div style={{ cursor: `url(${cursorPic}),auto` }}>
       <div>This is where the classroom is yayyyyy</div>
       <div className={styles.chalkboardContainer}>
         <Chalkboard></Chalkboard>
