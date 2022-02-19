@@ -6,8 +6,9 @@ function Landing() {
     <div>
       <div>This is a landing page!!!</div>
       <div>Here are some links</div>
-      <Link to="/classroom">Classroom Link!!</Link>
-      <Link to="/login">Login Link!!</Link>
+      <Link to="/classroom">Classroom Link!!</Link>&nbsp;
+      <Link to="/login">Login Link!!</Link>&nbsp;
+      <Link to="/selectAvartar">selectAvartar Link!!</Link>&nbsp;
     </div>
   );
 }
