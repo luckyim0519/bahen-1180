@@ -10,8 +10,11 @@ function Chalkboard() {
 
   return (
     <div onClick={handleClick} className={styles.board}>
-      <video autoPlay className={styles.video}>
-        <source src={require("./assets/paul_chow.mp4")} type="video/mp4"></source>
+      <video className={styles.video}>
+        <source
+          src={require("./assets/paul_chow.mp4")}
+          type="video/mp4"
+        ></source>
       </video>
     </div>
   );
