@@ -1,10 +1,18 @@
 import React from "react";
 import styles from "./assets/chalkboard.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Chalkboard() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/");
+  };
+
   return (
-    <div className={styles.board}>
-      <div>This is the board</div>
+    <div onClick={handleClick} className={styles.board}>
+      <video autoPlay className={styles.video}>
+        <source src={require("./assets/paul_chow.mp4")} type="video/mp4"></source>
+      </video>
     </div>
   );
 }

@@ -2,9 +2,17 @@
   border-radius: 10px;
   border: 10px solid #d2a56d;
   background-color: #fff;
+  padding: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.video {
   width: 30vw;
   height: 16vw;
-  padding: 1rem;
+}
+
+.board:hover {
+  transform: scale(1.05);
 }
 
 .chalkboardContainer {
