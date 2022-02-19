@@ -4,6 +4,18 @@ html {
   margin: 0px;
   padding: 0px;
   background-color: #4C6924;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
