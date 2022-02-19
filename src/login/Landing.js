@@ -5,20 +5,15 @@ import { motion } from "framer-motion";
 import BookAnimate from "./BookAnimate";
 
 function Landing() {
-  const books = Array.from(
-    { length: Math.floor(Math.random() * 15 + 5) },
-    () => {
-      return `book-${Math.random().toString(16).slice(2)}`;
-    }
-  );
+  const length = Math.floor(Math.random() * 15);
 
-  const bookContainerVariation = {
-    waterfall: {
-      transition: {
-        delayChildren: 1,
-      },
-    },
-  };
+  const books = [
+    ...new Set(
+      Array.from({ length }, () => {
+        return Math.random() * length;
+      })
+    ),
+  ];
 
   return (
     <div
@@ -31,7 +26,6 @@ function Landing() {
           position: "relative",
           height: "100vh",
         }}
-        variants={bookContainerVariation}
       >
         <BookAnimate books={books}></BookAnimate>
       </motion.div>

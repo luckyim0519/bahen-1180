@@ -3,14 +3,18 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function BookAnimate({ books }) {
-  return books.map((id) => {
+
+  console.log(books);
+
+  return books.map((bookNumber, index) => {
+    console.log(window.innerWidth / bookNumber, index);
     return (
       <motion.div
         style={{ position: "absolute" }}
-        key={id}
+        key={`book-${Math.random().toString(16).slice(2)}`}
         initial={{
           y: -170,
-          x: Math.random() * window.innerWidth,
+          x: window.innerWidth / bookNumber,
         }}
         animate={{
           y: window.innerHeight + 100,
@@ -18,7 +22,8 @@ function BookAnimate({ books }) {
         transition={{
           duration: 5,
           repeat: Infinity,
-          delay: Math.random() * 5,
+          delay: (index / books.length) * 10,
+          ease: "linear",
         }}
       >
         <img
