@@ -14,10 +14,9 @@ function Login({ app }) {
   const handleClick = async () => {
     console.log("Logging in now!");
     // firebase stuff, determine if pw and username correct
-    const signedIn = await signIn(email, password);
-    if (signedIn) {
+    await signIn(email, password).then(() => {
       navigate("/classroom");
-    }
+    });
 
     // let loginSuccess = true;
 
