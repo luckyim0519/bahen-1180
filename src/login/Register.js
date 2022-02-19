@@ -11,10 +11,13 @@ function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleClick = () => {
+  const handleClick = async () => {
     console.log("Registering new user now!!");
-    if (signUp(email, password)) {
+    const registered = await signUp(email, password);
+    if (registered) {
       navigate("/classroom");
+    } else {
+      console.log("Could not register");
     }
   };
 

@@ -11,10 +11,11 @@ function Login({ app }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleClick = () => {
+  const handleClick = async () => {
     console.log("Logging in now!");
     // firebase stuff, determine if pw and username correct
-    if (signIn(email, password)) {
+    const signedIn = await signIn(email, password);
+    if (signedIn) {
       navigate("/classroom");
     }
 
