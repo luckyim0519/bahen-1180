@@ -1,0 +1,14 @@
+.board {
+  border-radius: 10px;
+  border: 10px solid #d2a56d;
+  background-color: #fff;
+  width: 30vw;
+  height: 16vw;
+  padding: 1rem;
+}
+
+.chalkboardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
