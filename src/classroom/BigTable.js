@@ -2,10 +2,10 @@ import React from "react";
 import table from "./assets/images/table.png";
 import styles from "./assets/book.module.css";
 
-function Table() {
+function BigTable() {
   return (
-    <img src={table} className={styles.table} alt="table" width="20%"/>
+    <img src={table} className={styles.bigTable} alt="table"/>
   );
 }
 
-export default Table;
+export default BigTable;

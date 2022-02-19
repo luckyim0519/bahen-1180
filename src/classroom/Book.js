@@ -6,7 +6,6 @@ function Book(props) {
   const handleClick = () => {
     window.open(props.bookUrl);
   };
-
   return (
     <img src={book_a} className={styles.book} alt="book-a" onClick={handleClick}/>
   );

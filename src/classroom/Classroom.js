@@ -1,7 +1,8 @@
 import React from "react";
 import Chalkboard from "./Chalkboard";
 import Book from "./Book";
-import Table from "./Table";
+import SmallTable from "./SmallTable";
+import BigTable from "./BigTable";
 import styles from "./assets/chalkboard.module.css";
 import bookstyles from "./assets/book.module.css";
 
@@ -12,10 +13,15 @@ function Classroom() {
       <div className={styles.chalkboardContainer}>
         <Chalkboard></Chalkboard>
       </div>&nbsp;
-      <div className={bookstyles.bookshelf}>
-        <Table></Table>
-        <Table></Table>
-        <Table></Table>
+      <div className={bookstyles.tables}>
+        <SmallTable></SmallTable>
+        <SmallTable></SmallTable>
+        <SmallTable></SmallTable>
+      </div>
+      <div className={bookstyles.tables}>
+        <BigTable></BigTable>
+        <BigTable></BigTable>
+        <BigTable></BigTable>
       </div>
       <div className={bookstyles.bookshelf}>
         <Book bookUrl="https://student.cs.uwaterloo.ca/~cs451/"></Book>

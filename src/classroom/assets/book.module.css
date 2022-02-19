@@ -2,9 +2,20 @@
   text-align: center;
 }
 
-.table {
+.smallTable {
+  margin-left: 6%;
+  margin-right: 6%;
+  width: 16%;
+}
+
+.bigTable {
   margin-left: 5%;
   margin-right: 5%;
+  width: 20%;
+}
+
+.tables {
+  text-align: center;
 }
 
 .book {
