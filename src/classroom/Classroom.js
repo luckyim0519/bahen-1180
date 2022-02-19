@@ -8,7 +8,9 @@ import BookE from "./BookE";
 import BookF from "./BookF";
 import SmallTable from "./SmallTable";
 import BigTable from "./BigTable";
+import Notes from "./Notes";
 import styles from "./assets/chalkboard.module.css";
+import classroomStyles from "./assets/classroom.module.css";
 import bookstyles from "./assets/book.module.css";
 import course_outline from "./assets/co370_course_outline.pdf";
 import homework from "./assets/co370_hw4.pdf";
@@ -33,9 +35,11 @@ function Classroom() {
       style={{ cursor: `url(${cursorPic}),auto` }}
       className={styles.cursor}
     >
-      &nbsp;
-      <div className={styles.chalkboardContainer}>
-        <Chalkboard></Chalkboard>
+      <div className={classroomStyles.topArea}>
+        <div className={styles.chalkboardContainer}>
+          <Chalkboard></Chalkboard>
+        </div>
+        <Notes></Notes>
       </div>
       &nbsp;
       <div className={bookstyles.tables}>
