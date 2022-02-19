@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signIn } from "../firebase";
 import { pageTransition, pageVariants } from "../Transitions";
 
 import { motion } from "framer-motion";
@@ -10,32 +10,13 @@ function Login({ app }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const auth = getAuth();
 
   const handleClick = () => {
     console.log("Logging in now!");
     // firebase stuff, determine if pw and username correct
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        navigate("/classroom");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        if (errorCode == "auth/invalid-email") {
-          alert("Invalid Email");
-        } else if (
-          errorCode === "auth/user-disabled" ||
-          errorCode === "auth/user-not-found"
-        ) {
-          alert("User Doesn't Exist");
-        } else if (errorCode === "auth/wrong-password") {
-          alert("Wrong Password");
-        } else {
-          alert(errorMessage);
-        }
-      });
+    if (signIn(email, password)) {
+      navigate("/classroom");
+    }
 
     // let loginSuccess = true;
 

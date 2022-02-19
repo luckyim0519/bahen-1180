@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./login.module.css";
 import { useNavigate } from "react-router-dom";
 import { pageTransition, pageVariants } from "../Transitions";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { signUp } from "../firebase";
 import { motion } from "framer-motion";
 
 function Register() {
@@ -10,16 +10,10 @@ function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const auth = getAuth();
 
   const handleClick = () => {
     console.log("Registering new user now!!");
-
-    
-    // firebase stuff
-    let registerSuccess = true;
-
-    if (registerSuccess) {
+    if (signUp(email, password)) {
       navigate("/classroom");
     }
   };
