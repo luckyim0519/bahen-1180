@@ -3,5 +3,11 @@
 html {
   margin: 0px;
   padding: 0px;
-  background-color: #168b43d2;
+  background-color: #4C6924;
 }
+
+body {
+  margin: 0
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
