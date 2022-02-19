@@ -6,11 +6,19 @@ import BookAnimate from "./BookAnimate";
 
 import styles from "./landing.module.css";
 
+import { pageVariants, pageTransition } from "../Transitions";
+
 function Landing() {
   const books = [1, 5, 3, 9, 2, 11, 7, 4, 8, 12];
 
   return (
-    <motion.div>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <motion.div className={styles.bookContainer} style={{}}>
         <BookAnimate books={books}></BookAnimate>
       </motion.div>

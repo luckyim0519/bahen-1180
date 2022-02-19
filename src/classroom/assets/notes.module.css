@@ -1,0 +1,34 @@
+.notes {
+  resize: none;
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
+  border: solid 5px #DBDAEA;
+  border-radius: 10px;
+}
+
+.notesContainer > textarea {
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    padding: 5px;
+}
+
+
+.notesContainer {
+  grid-column: 3/4;
+  grid-row: 2/end;
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notesContainer > label {
+  align-self: flex-start;
+  margin: 0px 30px;
+  font-size: 2rem;
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+  color: #DDC3D0;
+}
