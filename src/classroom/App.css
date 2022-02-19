@@ -1,0 +1,37 @@
+*{
+
+cursor: none;
+background-color: black;
+pointer-events: none;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, 50%);
+border-radius: 50%;
+quality : 1;
+transition: opacity 0.3% ease-in-out, transform 0.3 ease-in-out;
+
+}
+
+.cursor-dot
+{
+    width : 8px;
+    height: 8px;
+    background-color: aqua;
+
+}
+
+.cursor-dot-outline
+{
+    width: 40px;
+    height: 40px;
+    background-color:rgba(229, 128, 128, 0.5);
+}
+
+.links-container{
+
+    display: grid;
+    place-item: center;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+}
