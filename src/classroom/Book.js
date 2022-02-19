@@ -1,14 +1,14 @@
 import React from "react";
-import book_a from './assets/images/book-a.png';
+import book_a from "./assets/images/book-a.png";
 import styles from "./assets/book.module.css";
 
-function Book() {
+function Book(props) {
   const handleClick = () => {
-    window.open("https://student.cs.uwaterloo.ca/~cs451/");
+    window.open(props.bookUrl);
   };
 
   return (
-    <img src={book_a} alt="book-a" className={styles.book} onClick={handleClick}/>
+    <img src={book_a} className={styles.book} alt="book-a" onClick={handleClick}/>
   );
 }
 
