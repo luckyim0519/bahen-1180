@@ -32,14 +32,19 @@ export function signIn(email, password) {
         const errorMessage = error.message;
         if (errorCode == 'auth/invalid-email') {
           alert('Invalid Email');
+          return false;
         } else if(errorCode === 'auth/user-disabled' || errorCode === 'auth/user-not-found') {
           alert("User Doesn't Exist");
+          return false;
         } else if(errorCode === 'auth/wrong-password') {
           alert('Wrong Password');
+          return false;
         } else if(errorCode === "auth/network-request-failed") {
           alert("Network Request Failed. Please check network connection");
+          return false;
         } else {
           alert(errorMessage)
+          return false;
         }
     });
 }
@@ -54,12 +59,16 @@ export function signUp(email, password) {
         const errorMessage = error.message;
         if (errorCode == 'auth/invalid-email') {
           alert('Invalid Email');
+          return false;
         } else if(errorCode === 'auth/weak-password') {
           alert("Password Too Weak");
-        } else if(errorCode === 'auth/wrong-password') {
+          return false;
+        } else if(errorCode === 'auth/email-already-in-use') {
           alert('Wrong Password');
+          return false;
         } else if(errorCode === "auth/network-request-failed") {
           alert("Network Request Failed. Please check network connection");
+          return false;
         } else {
           alert(errorMessage)
         }
