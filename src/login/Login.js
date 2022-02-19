@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
 
+import { pageTransition, pageVariants } from "../Transitions";
+
+import { motion } from "framer-motion";
+
 function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -19,7 +23,14 @@ function Login() {
   };
 
   return (
-    <div className={styles.loginParent}>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+      className={styles.loginParent}
+    >
       <div className={styles.loginContainer}>
         <h1>Login</h1>
         <div className={styles.inputContainer}>
@@ -44,7 +55,7 @@ function Login() {
           Let Me Innn!
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./login.module.css";
 import { useNavigate } from "react-router-dom";
+import { pageTransition, pageVariants } from "../Transitions";
+
+import { motion } from "framer-motion";
 
 function Register() {
   const navigate = useNavigate();
@@ -19,7 +22,14 @@ function Register() {
   };
 
   return (
-    <div className={styles.loginParent}>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageVariants}
+      transition={pageTransition}
+      className={styles.loginParent}
+    >
       <div className={styles.loginContainer}>
         <h1>Make an Account</h1>
         <div className={styles.inputContainer}>
@@ -53,7 +63,7 @@ function Register() {
           Yayy sign me up!
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
